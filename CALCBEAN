@@ -1,0 +1,164 @@
+# ProjCalc2
+proj de um calculadora para java web
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package Cal.controle;
+import java.io.Serializable;
+import javax.faces.application.FacesMessage;
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
+import javax.faces.context.FacesContext;
+import static jdk.nashorn.internal.objects.Global.Infinity;
+/**
+ * @author Cleiton
+ */
+@ManagedBean(name = "CalculadoraBean")
+@SessionScoped
+/**
+ *
+ * @author Andre
+ */
+public class CalculadoraBean implements Serializable {
+    
+    private double valor1;
+    private double valor2;
+    private double resultado;
+    
+    public void somar(){
+        resultado = valor1 + valor2;
+        FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, "Info", "Soma realizada com sucesso!"));
+        
+    }
+    public void subtrair(){
+        resultado = valor1 - valor2;
+        FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, "Info", "subtração realizada com sucesso!"));
+        
+    }
+    public void multiplicar(){
+        resultado = valor1 * valor2;
+        FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, "Info", "Multiplicação realizada com sucesso!"));
+        
+    }
+
+    public void dividir(){
+        resultado = valor1 / valor2;
+        
+        if(resultado==Infinity)
+        {
+            FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, "Info", "ERRO"));
+        }else{
+        FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, "Info", "Divisão realizada com sucesso!"));
+        }
+    }
+    public double getValor1() {
+        return valor1;
+    }
+
+    public void setValor1(double valor1) {
+        this.valor1 = valor1;
+    }
+
+    public double getValor2() {
+        return valor2;
+    }
+
+    public void setValor2(double valor2) {
+        this.valor2 = valor2;
+    }
+
+    public double getResultado() {
+        return resultado;
+    }
+
+    public void setResultado(double resultado) {
+        this.resultado = resultado;
+    }
+    
+    
+
+    
+}
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package Cal.controle;
+import java.io.Serializable;
+import javax.faces.application.FacesMessage;
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
+import javax.faces.context.FacesContext;
+import static jdk.nashorn.internal.objects.Global.Infinity;
+/**
+ * @author Cleiton
+ */
+@ManagedBean(name = "CalculadoraBean")
+@SessionScoped
+/**
+ *
+ * @author Andre
+ */
+public class CalculadoraBean implements Serializable {
+    
+    private double valor1;
+    private double valor2;
+    private double resultado;
+    
+    public void somar(){
+        resultado = valor1 + valor2;
+        FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, "Info", "Soma realizada com sucesso!"));
+        
+    }
+    public void subtrair(){
+        resultado = valor1 - valor2;
+        FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, "Info", "subtração realizada com sucesso!"));
+        
+    }
+    public void multiplicar(){
+        resultado = valor1 * valor2;
+        FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, "Info", "Multiplicação realizada com sucesso!"));
+        
+    }
+
+    public void dividir(){
+        resultado = valor1 / valor2;
+        
+        if(resultado==Infinity)
+        {
+            FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, "Info", "ERRO"));
+        }else{
+        FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, "Info", "Divisão realizada com sucesso!"));
+        }
+    }
+    public double getValor1() {
+        return valor1;
+    }
+
+    public void setValor1(double valor1) {
+        this.valor1 = valor1;
+    }
+
+    public double getValor2() {
+        return valor2;
+    }
+
+    public void setValor2(double valor2) {
+        this.valor2 = valor2;
+    }
+
+    public double getResultado() {
+        return resultado;
+    }
+
+    public void setResultado(double resultado) {
+        this.resultado = resultado;
+    }
+    
+    
+
+    
+}
